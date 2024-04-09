@@ -24,16 +24,16 @@ app.use(
   })
 );
 app.use("/uploads", express.static(path.join(process.cwd(), "uploads")));
-app.use("/api/auth", authRouter);
+app.use("/auth", authRouter);
 app.get("/", (req, res) => {
   res.send({
     message: "server is up & running"
   })
 });
-app.use("/api/user", userRouter);
-app.use("/api/product", productRouter);
-app.use("/api/session-logs", sessionRouter);
-app.use("/api/order", orderRouter);
+app.use("/user", userRouter);
+app.use("/product", productRouter);
+app.use("/session-logs", sessionRouter);
+app.use("/order", orderRouter);
 app.listen(PORT, () => {
   console.log("server is listening on port", PORT);
 });
