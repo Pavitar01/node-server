@@ -2,7 +2,8 @@
     "functions": {
       "api/**/*.js": {
         "runtime": "nodejs14.x",
-        "memory": 1024
+        "memory": 1024,
+        "timeout": 30
       }
     },
     "routes": [
