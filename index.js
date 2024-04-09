@@ -25,6 +25,11 @@ app.use(
 );
 app.use("/uploads", express.static(path.join(process.cwd(), "uploads")));
 app.use("/api/auth", authRouter);
+app.get("/", (req, res) => {
+  res.send({
+    message: "server is up & running"
+  })
+});
 app.use("/api/user", userRouter);
 app.use("/api/product", productRouter);
 app.use("/api/session-logs", sessionRouter);
